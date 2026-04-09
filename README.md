@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PixelStudio Digital Agency Landing Page
 
-## Getting Started
+A modern, high-performance, and deeply engaging landing page for a fractional Digital Agency, built to showcase premium digital services and impressive portfolio projects.
 
-First, run the development server:
+##  Setup Instructions
 
+Follow these instructions to run the application locally on your machine.
+
+### Prerequisites
+- Node.js (v18.x or later)
+- npm, yarn, pnpm, or bun
+
+### 1. Clone the repository
+```bash
+# If securely hosted, clone via your preferred method
+git clone <your-repository-url>
+cd pixelstudio
+```
+
+### 2. Install dependencies
+Ensure all packages like `framer-motion`, `lucide-react`, and `radix-ui` are properly downloaded:
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4. View the App
+Open [http://localhost:3000](http://localhost:3000) with your browser to explore the local instance of the landing page.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Tech Stack Used
 
-## Learn More
+This project was built utilizing modern web technologies and best practices:
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js] (App Router) - For optimized routing, superior performance, and easy image optimization (`next/image`).
+- **Styling:** [Tailwind CSS] - Used globally for rapid responsive design, fluid layouts (Flexbox/Grid), and immediate Dark Mode integration without messy CSS files.
+- **Icons:** [Lucide React] - For lightweight, consistent, and beautiful SVG icons across the navigation and contact sections.
+- **Animations:** [Framer Motion] (via `motion/react`) - For staggered entrance animations, spotlight effects, and smooth interactive layout transitions.
+- **Component Libraries:** Custom implementations drawing inspiration from modern UI systems (like Aceternity UI drop-ins for the Hero Spotlight and Hover Cards).
+- **Typography:** `next/font/google` - Configured with "Poppins" and "DM Sans" to avoid layout shifts and maintain a highly legible and premium look.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Assumptions & Additional Features
 
-## Deploy on Vercel
+### Assumptions Made
+- **Client-Side Form Handling:** It is assumed that the agency does not have an active database connected yet. Therefore, the contact form currently mimics a backend submission process using React Hooks (`useState`) and a local timeout to trigger the visual "Success State".
+- **Static Assets:** The project assumes that portfolio images are statically served via the `public/` directory rather than a headless CMS, which is optimal for a fast MVP delivery.
+- **No Complex Routing:** Since this is a specialized landing page, it assumes a singular page architecture where the Navbar smoothly directs users to different sections locally via Hash links (`#services`).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Additional Features Implemented
+- **Robust Dark/Light Mode Theme Integration:** Deep integration of Tailwind's `dark:` classes implemented throughout every component—the dark backdrop, border colors, inputs, and gradients fluidly adapt using the custom animated theme switch button in the navigation.
