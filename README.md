@@ -50,7 +50,7 @@ This project was built utilizing modern web technologies and best practices:
 
 ---
 
-## ✨ Assumptions & Additional Features
+##  Assumptions & Additional Features
 
 ### Assumptions Made
 - **Client-Side Form Handling:** It is assumed that the agency does not have an active database connected yet. Therefore, the contact form currently mimics a backend submission process using React Hooks (`useState`) and a local timeout to trigger the visual "Success State".
