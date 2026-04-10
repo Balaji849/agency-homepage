@@ -108,7 +108,7 @@ const Services = () => {
                 Full-funnel marketing strategies including SEO, PPC, and Social Media to accelerate your business growth.
               </p>
               <div className="mt-auto">
-                <Button variant="secondary" size="sm" className="rounded-full">
+                <Button variant="secondary" size="sm" className="rounded-full bg-white dark:text-black hover:bg-white hover:shadow-md transition-shadow duration-200">
                   View Case Studies
                 </Button>
               </div>

@@ -93,7 +93,7 @@ const Portfolio = () => {
                  <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
                 <span className="text-gray-100 font-medium text-sm mb-2 uppercase tracking-wider">{project.category}</span>
                
-                <Link href="#" className="inline-flex w-fit items-center text-sm p-4 border-none bg-gray-500/50 rounded-xl text-white hover:text-neutral-200 transition-colors">
+                <Link href="#" className="inline-flex w-fit items-center text-sm p-4 border-none bg-black opacity-75 dark:bg-white dark:text-black rounded-xl text-white hover:text-neutral-200 transition-colors">
                   View Project <ArrowRight className="ml-2" />
                 </Link>
 
