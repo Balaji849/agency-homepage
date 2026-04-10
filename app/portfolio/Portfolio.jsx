@@ -90,8 +90,9 @@ const Portfolio = () => {
 
               {/* Project Info appearing on Hover */}
               <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col justify-end">
-                <span className="text-gray-200 font-medium text-sm mb-2 uppercase tracking-wider">{project.category}</span>
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+                 <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+                <span className="text-gray-100 font-medium text-sm mb-2 uppercase tracking-wider">{project.category}</span>
+               
                 <Link href="#" className="inline-flex w-fit items-center text-sm p-4 border-none bg-gray-500/50 rounded-xl text-white hover:text-neutral-200 transition-colors">
                   View Project <ArrowRight className="ml-2" />
                 </Link>
