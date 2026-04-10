@@ -231,7 +231,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="px-10"
+                    className="p-7 rounded-full"
                   >
                     Send message
                   </Button>
