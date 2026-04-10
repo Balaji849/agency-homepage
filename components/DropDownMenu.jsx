@@ -1,3 +1,12 @@
+/**
+ * Component: DropDownMenu
+ * Purpose:   Animated mobile navigation overlay triggered by the hamburger icon.
+ *            Uses Framer Motion for slide-in animation. Contains anchor links
+ *            to all page sections (Services, Portfolio, Contact).
+ * Used in:   components/Navbar.jsx (mobile only, md:hidden)
+ * Props:     onClose — callback to close the menu on link click
+ */
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 

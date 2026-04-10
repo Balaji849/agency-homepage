@@ -1,3 +1,13 @@
+/**
+ * Component: Portfolio
+ * Purpose:   Displays a responsive grid of 6 agency portfolio projects.
+ *            Each card features an image with a hover zoom effect, a dark overlay,
+ *            and slide-up project info (title, category, "View Project" link).
+ *            Project data is managed via a local `portfolioProjects` array.
+ * Used in:   app/page.jsx
+ * Section ID: #portfolio (used by Navbar anchor links)
+ */
+
 import { ArrowBigRight, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -57,12 +67,12 @@ const Portfolio = () => {
           <div className="w-px h-16 bg-neutral-200 dark:bg-neutral-800 mt-8 hidden md:block"></div>
         </div>
 
-        {/* CSS Grid for the Portfolio matching 3-6 items requirement */}
+        {/* CSS Grid for the Portfolio  */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioProjects.map((project) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-[2rem] bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800/80 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500"
+              className="group relative overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800/80 cursor-pointer   transition-all duration-500"
             >
               {/* Image Container with Hover Scale Animation */}
               <div className="relative w-full aspect-[4/3] overflow-hidden">
@@ -70,6 +80,7 @@ const Portfolio = () => {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
                 />
 

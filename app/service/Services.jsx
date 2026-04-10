@@ -1,6 +1,17 @@
+/**
+ * Component: Services
+ * Purpose:   Displays all agency service offerings in a bento-grid card layout.
+ *            Features 5 service cards: Content Strategy, UX/UI Research, Branding Identity,
+ *            Web Development, and Digital Marketing (wide card with image).
+ *            Each card uses hover animations (scale, border color) and Lucide icons.
+ * Used in:   app/page.jsx
+ * Section ID: #services (used by Navbar anchor links)
+ */
+
 import { PenTool, Layers, Fingerprint, CodeXml, Rocket, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 const Services = () => {
   return (
@@ -8,7 +19,7 @@ const Services = () => {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 flex flex-col items-center">
           
-          <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-400 mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-900 to-neutral-500 dark:from-white dark:to-neutral-400 mb-6">
             Services We Offer
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto text-lg">
@@ -30,9 +41,9 @@ const Services = () => {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-8 relative z-10 line-clamp-3">
               Compelling narratives that engage your audience and drive conversions through SEO-optimized copy.
             </p>
-            <Link href="#" className="inline-flex items-center text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 transition-colors relative z-10 mt-auto">
-              Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <Button asChild variant="link" className="p-0 h-auto text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 relative z-10 mt-auto">
+              <Link href="#">Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
           </div>
 
           {/* Card 2 */}
@@ -47,9 +58,9 @@ const Services = () => {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-8 relative z-10 line-clamp-3">
               User-centric design backed by data analysis to ensure intuitive and enjoyable digital interactions.
             </p>
-            <Link href="#" className="inline-flex items-center text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 transition-colors relative z-10 mt-auto">
-              Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <Button asChild variant="link" className="p-0 h-auto text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 relative z-10 mt-auto">
+              <Link href="#">Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
           </div>
 
           {/* Card 3 */}
@@ -64,9 +75,9 @@ const Services = () => {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-8 relative z-10 line-clamp-3">
               Creating memorable brand identities that stand out in a crowded marketplace and build trust.
             </p>
-            <Link href="#" className="inline-flex items-center text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 transition-colors relative z-10 mt-auto">
-              Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <Button asChild variant="link" className="p-0 h-auto text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 relative z-10 mt-auto">
+              <Link href="#">Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
           </div>
 
           {/* Card 4 */}
@@ -81,9 +92,9 @@ const Services = () => {
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-8 relative z-10 line-clamp-3">
               Robust, scalable, and secure web solutions built on the latest frameworks for optimal performance.
             </p>
-            <Link href="#" className="inline-flex items-center text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 transition-colors relative z-10 mt-auto">
-              Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            <Button asChild variant="link" className="p-0 h-auto text-sm font-semibold text-neutral-900 dark:text-white group-hover:text-gray-500 relative z-10 mt-auto">
+              <Link href="#">Explore <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
           </div>
 
           {/* Card 5 */}
@@ -97,9 +108,9 @@ const Services = () => {
                 Full-funnel marketing strategies including SEO, PPC, and Social Media to accelerate your business growth.
               </p>
               <div className="mt-auto">
-                <button className="px-6 py-2.5 rounded-full bg-neutral-200 dark:bg-[#222222] text-sm font-medium hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors text-neutral-900 dark:text-white">
+                <Button variant="secondary" size="sm" className="rounded-full">
                   View Case Studies
-                </button>
+                </Button>
               </div>
             </div>
             

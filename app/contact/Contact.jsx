@@ -1,7 +1,19 @@
+/**
+ * Component: Contact
+ * Purpose:   Full-featured contact section with a validated enquiry form and contact info panel.
+ *            Form fields: First/Last name, Email, Phone (with country code), Message, and
+ *            multi-select Services checkboxes. Includes real-time field validation with
+ *            error messages and a success state with a confirmation UI after submission.
+ * State:     formData, errors, isSubmitted (all managed locally with useState)
+ * Used in:   app/page.jsx
+ * Section ID: #contact (used by Navbar anchor links)
+ */
+
 "use client";
 
 import React, { useState } from "react";
 import { MessageSquare, Mail, Phone, MapPin, CheckCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const SERVICES_OPTIONS = [
   "Website design",
@@ -96,12 +108,13 @@ const Contact = () => {
                 <p className="text-neutral-600 dark:text-neutral-400">
                   Thank you for reaching out. Our friendly team will get back to you shortly.
                 </p>
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="mt-8 px-6 py-3 bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium rounded-xl hover:bg-neutral-800 dark:hover:bg-neutral-200 transition"
-                >
-                  Send another message
-                </button>
+                <Button
+                    onClick={() => setIsSubmitted(false)}
+                    size="lg"
+                    className="mt-8 px-6"
+                  >
+                    Send another message
+                  </Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-8">
@@ -214,12 +227,15 @@ const Contact = () => {
                 </div>
 
                 {/* Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full py-4 px-6 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-200 transition active:scale-[0.98]"
-                >
-                  Send message
-                </button>
+                <div className="flex justify-center">
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="px-10"
+                  >
+                    Send message
+                  </Button>
+                </div>
               </form>
             )}
           </div>

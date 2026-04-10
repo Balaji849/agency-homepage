@@ -1,3 +1,12 @@
+/**
+ * Component: Navbar
+ * Purpose:   Sticky top navigation bar with logo, nav links, and theme toggler.
+ *            Handles responsive layout — desktop shows inline links,
+ *            mobile shows a hamburger icon that reveals the DropDownMenu.
+ * Used in:   app/page.jsx
+ * Children:  DropDownMenu (mobile), AnimatedThemeToggler
+ */
+
 "use client"
 
 import Image from 'next/image'

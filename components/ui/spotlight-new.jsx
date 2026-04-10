@@ -1,3 +1,12 @@
+/**
+ * Component: Spotlight (UI Primitive)
+ * Purpose:   Decorative animated spotlight effect used in the Hero section.
+ *            Renders radial gradient beams that oscillate horizontally using
+ *            Framer Motion. Only shown in dark mode.
+ * Used in:   app/page.jsx (Hero section, dark mode only)
+ * Props:     gradientFirst/Second/Third, translateY, width, height, duration, xOffset
+ */
+
 "use client";
 import React from "react";
 import { motion } from "framer-motion";

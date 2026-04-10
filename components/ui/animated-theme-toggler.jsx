@@ -1,3 +1,12 @@
+/**
+ * Component: AnimatedThemeToggler (UI Primitive)
+ * Purpose:   Dark / Light mode toggle button with a smooth circular reveal animation.
+ *            Uses the View Transitions API for a ripple-from-button transition effect.
+ *            Persists theme preference to localStorage and syncs with the <html> class.
+ * Used in:   components/Navbar.jsx
+ * Props:     className, duration (transition speed in ms)
+ */
+
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Moon, Sun } from "lucide-react"
