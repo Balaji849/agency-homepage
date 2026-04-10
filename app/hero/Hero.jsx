@@ -38,7 +38,7 @@ const Hero = () => {
           <Button
             asChild
             size="lg"
-            className="rounded-full px-8 py-4 text-base hover:scale-105 transition-transform"
+            className="rounded-full px-8 py-8 text-base hover:scale-105 transition-transform"
           >
             <Link href="#portfolio">
               View Our Work
